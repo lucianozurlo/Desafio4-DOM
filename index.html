@@ -14,14 +14,54 @@
             font-family: 'Open Sans', sans-serif;
             margin: 30px;
         }
+        li {
+            font-size: 14px;
+        }
     </style>
 </head>
 
 <body>
 
     <div id="asado">
-        <ul id="listado"></ul>
+        <h2>¡Hoy hacemos asado!</h2>
+        <p>Lista para la carnicería:</p>
+        <ul id="form"></ul>
+            <li style="list-style: none; margin-bottom: 20px;">
+                <label for="cantVacio" style="line-height: 2">¿Cuánto querés de Vacío?</label><br>
+                <input id="cantVacio" type="text" placeholder="Vacío" value="2"> kg<br>
+                <label for="precioVacio" style="line-height: 2">El kilo cuesta...</label><br>
+                $<input id="precioVacio" type="text" placeholder="Vacío" value="80">/kg
+            </li>
+            <li style="list-style: none; margin-bottom: 20px;">
+                <label for="cantCostilla" style="line-height: 2">¿Cuánto querés de Costilla?</label><br>
+                <input id="cantCostilla" type="text" placeholder="Costilla" value="3"> kg<br>
+                <label for="precioCostilla" style="line-height: 2">El kilo cuesta...</label><br>
+                $<input id="precioCostilla" type="text" placeholder="Vacío" value="120">/kg
+            </li>
+            <li style="list-style: none; margin-bottom: 30px;">
+                <label for="cantEntrana" style="line-height: 2">¿Cuánto querés de Entraña?</label><br>
+                <input id="cantEntrana" type="text" placeholder="Entraña" value="4"> kg<br>
+                <label for="precioEntrana" style="line-height: 2">El kilo cuesta...</label><br>
+                $<input id="precioEntrana" type="text" placeholder="Vacío" value="100">/kg
+            </li>
+            <li style="list-style: none; margin-bottom: 5px;">
+                <input id="checkCarbon" type="checkbox" checked>
+                <label for="checkCarbon" style="line-height: 2">Necesito carbón. La bolsa de 4kg cuesta $50</label>
+            </li>
+            <li style="list-style: none; margin-bottom: 20px;">
+                <input id="checkBeneficios" type="checkbox" checked>
+                <label for="checkBeneficios" style="line-height: 2">Tengo mi tarjeta de beneficios <em>(me ahorro un 20%)</em></label>
+            </li>
+            <li style="list-style: none; margin-bottom: 20px;">
+                <input type="button" value="Calcular">
+            </li>
+
+        <ul id="listado">
+        </ul>
+        <p id="conclusion"></ul>
     </div>
+
+
 
 
     <script src="scripts.js"></script>
